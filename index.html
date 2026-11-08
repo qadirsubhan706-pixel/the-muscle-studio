@@ -1,0 +1,1226 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>The Muscle Studio I-8 | Ladies Fitness Islamabad</title>
+
+    <meta name="description" content="Discover The Muscle Studio I-8, an exclusive ladies-only fitness studio located in I-8 Markaz, Islamabad. Start your fitness journey today.">
+
+    <meta name="theme-color" content="#101010">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+  <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --black: #101010;
+    --dark: #171717;
+    --card: #1c1c1c;
+    --pink: #e85d8e;
+    --white: #ffffff;
+    --grey: #bdbdbd;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 85px;
+}
+
+body {
+    background: var(--black);
+    color: var(--white);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-padding {
+    padding: 105px 0;
+}
+
+/* NAVBAR */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(16, 16, 16, 0.96);
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    backdrop-filter: blur(12px);
+}
+
+.navbar {
+    height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo strong {
+    color: var(--pink);
+}
+
+.logo small {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 3px;
+    color: var(--grey);
+    margin-top: 4px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    border: 2px solid var(--pink);
+    display: grid;
+    place-items: center;
+    color: var(--pink);
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--grey);
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--pink);
+}
+
+.nav-links .nav-btn {
+    background: var(--pink);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 3px;
+}
+
+.nav-links .nav-btn:hover {
+    background: white;
+    color: var(--black);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: white;
+    margin: 6px 0;
+    transition: 0.3s;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background:
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=2000")
+        center/cover no-repeat;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(10,10,10,0.96) 0%,
+        rgba(10,10,10,0.78) 55%,
+        rgba(10,10,10,0.35) 100%
+    );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 100px;
+}
+
+.eyebrow,
+.section-label {
+    color: var(--pink);
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.pink-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--pink);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 82px);
+    line-height: 1.12;
+    margin: 28px 0;
+    max-width: 850px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.about-content h2 span,
+.why-content h2 span,
+.cta h2 span {
+    color: var(--pink);
+}
+
+.hero-content > p {
+    color: var(--grey);
+    max-width: 510px;
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 16px 27px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+    border-radius: 3px;
+}
+
+.btn-primary {
+    background: var(--pink);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: white;
+    color: var(--black);
+    transform: translateY(-4px);
+}
+
+.btn-outline {
+    border: 1px solid rgba(255,255,255,0.6);
+    color: white;
+}
+
+.btn-outline:hover {
+    background: white;
+    color: var(--black);
+}
+
+.hero-note {
+    margin-top: 50px;
+    color: var(--grey);
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.hero-note span:first-child {
+    color: var(--pink);
+}
+
+.separator {
+    padding: 0 12px;
+}
+
+.scroll-down {
+    position: absolute;
+    right: 5%;
+    bottom: 35px;
+    color: var(--grey);
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+/* SECTION HEADINGS */
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 55px;
+}
+
+.section-heading h2,
+.about-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 46px);
+    margin: 18px 0;
+}
+
+.section-heading p,
+.section-heading small {
+    color: var(--grey);
+    line-height: 1.8;
+}
+
+.section-heading small {
+    display: block;
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* ABOUT */
+
+.about {
+    background: var(--dark);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 80px;
+}
+
+.about-image {
+    position: relative;
+    height: 500px;
+}
+
+.about-image img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.image-tag {
+    position: absolute;
+    bottom: 25px;
+    right: -20px;
+    background: var(--pink);
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    letter-spacing: 2px;
+}
+
+.image-tag span {
+    font-size: 11px;
+}
+
+.image-tag strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+}
+
+.about-content h2 {
+    line-height: 1.25;
+}
+
+.about-content p,
+.why-content > p {
+    color: var(--grey);
+    line-height: 1.9;
+    font-size: 14px;
+    margin: 18px 0;
+}
+
+.text-link {
+    display: inline-block;
+    color: var(--pink);
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+.text-link span {
+    margin-left: 8px;
+}
+
+/* FITNESS */
+
+.fitness-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.fitness-card {
+    background: var(--card);
+    padding: 35px 28px;
+    min-height: 225px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.05);
+    transition: 0.35s;
+}
+
+.fitness-card:hover {
+    transform: translateY(-9px);
+    border-color: var(--pink);
+}
+
+.card-icon {
+    color: var(--pink);
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.fitness-card h3 {
+    font-size: 18px;
+    margin-bottom: 13px;
+}
+
+.fitness-card p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.card-number {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    font-size: 42px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.045);
+}
+
+/* WHY CHOOSE US */
+
+.why {
+    background: var(--dark);
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 75px;
+}
+
+.why-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(35px, 4vw, 53px);
+    line-height: 1.25;
+    margin: 22px 0;
+}
+
+.why-list {
+    margin-top: 30px;
+}
+
+.why-item {
+    display: flex;
+    gap: 17px;
+    margin-bottom: 24px;
+}
+
+.why-item > span {
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    min-width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+}
+
+.why-item h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+}
+
+.why-item p {
+    font-size: 12px;
+    color: var(--grey);
+}
+
+.why-image {
+    position: relative;
+    height: 550px;
+}
+
+.why-image img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.why-image-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 35px 25px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+}
+
+.why-image-caption span {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--pink);
+    margin-bottom: 10px;
+}
+
+.why-image-caption strong {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+}
+
+/* GALLERY */
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 220px 220px;
+    gap: 15px;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.gallery-item img {
+    height: 100%;
+    transition: transform 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+/* CTA */
+
+.cta {
+    padding: 100px 0;
+    text-align: center;
+    background:
+        linear-gradient(rgba(0,0,0,0.83), rgba(0,0,0,0.83)),
+        url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600")
+        center/cover fixed;
+}
+
+.cta h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 55px);
+    line-height: 1.3;
+    margin: 22px 0;
+}
+
+.cta p {
+    color: var(--grey);
+    margin-bottom: 30px;
+}
+
+/* CONTACT */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 30px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-card {
+    background: var(--card);
+    padding: 25px;
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+.contact-icon {
+    color: var(--pink);
+    font-size: 27px;
+}
+
+.contact-card h3 {
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+}
+
+.contact-card p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.contact-card a {
+    color: var(--pink);
+    font-size: 12px;
+    display: inline-block;
+    margin-top: 8px;
+    font-weight: 700;
+}
+
+.map-box {
+    min-height: 390px;
+    overflow: hidden;
+    border: 2px solid var(--card);
+}
+
+/* FOOTER */
+
+.footer {
+    background: #080808;
+    padding-top: 65px;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 50px;
+    padding-bottom: 50px;
+}
+
+.footer-brand > p {
+    color: var(--grey);
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 280px;
+    margin-top: 20px;
+}
+
+.footer-links,
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    color: var(--pink);
+}
+
+.footer-links a,
+.footer-contact p,
+.footer-contact a {
+    color: var(--grey);
+    font-size: 12px;
+    transition: 0.3s;
+}
+
+.footer-links a:hover,
+.footer-contact a:hover {
+    color: var(--pink);
+}
+
+.copyright {
+    text-align: center;
+    padding: 22px 10px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.copyright p {
+    font-size: 11px;
+    color: var(--grey);
+}
+
+/* WHATSAPP FLOAT */
+
+.whatsapp-float {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    width: 52px;
+    height: 52px;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    font-weight: 800;
+    z-index: 999;
+    box-shadow: 0 5px 25px rgba(37,211,102,0.3);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* REVEAL ANIMATIONS */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+
+    .nav-links {
+        gap: 17px;
+    }
+
+    .about-grid,
+    .why-grid {
+        gap: 40px;
+    }
+
+    .fitness-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-rows: 180px 180px;
+    }
+
+}
+
+/* RESPONSIVE MOBILE */
+
+@media (max-width: 700px) {
+
+    .section-padding {
+        padding: 75px 0;
+    }
+
+    .navbar {
+        height: 72px;
+    }
+
+    .menu-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 72px;
+        left: 0;
+        width: 100%;
+        background: #151515;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 10px 0;
+        visibility: hidden;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: 0.3s;
+    }
+
+    .nav-links.show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 16px;
+    }
+
+    .nav-links .nav-btn {
+        display: inline-block;
+        margin: 8px 0;
+    }
+
+    .hero {
+        min-height: 750px;
+        background-position: 60% center;
+    }
+
+    .hero-overlay {
+        background: rgba(0,0,0,0.75);
+    }
+
+    .hero-content {
+        padding-top: 90px;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-content > p {
+        font-size: 14px;
+    }
+
+    .scroll-down {
+        display: none;
+    }
+
+    .about-grid,
+    .why-grid,
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+        height: 360px;
+        margin-right: 15px;
+    }
+
+    .about-content h2 {
+        font-size: 34px;
+    }
+
+    .fitness-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fitness-card {
+        min-height: 190px;
+    }
+
+    .why-image {
+        height: 370px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 180px 180px 180px;
+    }
+
+    .gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .cta {
+        padding: 75px 0;
+        background-attachment: scroll;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .map-box {
+        min-height: 320px;
+    }
+
+    .hero-note {
+        line-height: 2;
+    }
+
+}
+
+/* REDUCED MOTION */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+/* Show all sections without JavaScript */
+
+.reveal {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}
+    /* Mobile Navigation */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        cursor: pointer;
+        background: transparent;
+        border: none;
+        z-index: 1001;
+    }
+
+    .menu-toggle span {
+        width: 25px;
+        height: 3px;
+        background: #ff4f91;
+        border-radius: 5px;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links li {
+        list-style: none;
+    }
+
+    .nav-links a {
+        color: white;
+        text-decoration: none;
+    }
+      }
+    .menu-toggle {
+    width: 40px !important;
+    height: 35px !important;
+    padding: 5px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+}
+
+.menu-toggle span {
+    display: block !important;
+    width: 25px !important;
+    height: 3px !important;
+    margin: 0 !important;
+    flex-shrink: 0;
+}
+    .image-tag {
+    right: 20px !important;
+    left: auto !important;
+    bottom: 20px !important;
+    max-width: 130px;
+    box-sizing: border-box;
+    }
+    @media (max-width: 768px) {
+    .navbar {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        gap: 4px;
+        position: relative;
+        z-index: 10000;
+    }
+
+    .nav-links {
+        display: none !important;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #111;
+        padding: 25px;
+        flex-direction: column;
+        gap: 20px;
+        z-index: 9999;
+    }
+
+    .nav-links.active {
+        display: flex !important;
+    }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="header">
+    <nav class="navbar container">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">M</span>
+            <span>THE MUSCLE <strong>STUDIO</strong>
+            <small>I-8 ISLAMABAD</small></span>
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false" onclick="document.getElementById('navLinks').classList.toggle('active')">
+    <span></span>
+    <span></span>
+    <span></span>
+        </button>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#fitness">Fitness</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#contact" class="nav-btn">Join Us</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content">
+
+        <span class="eyebrow">
+            <span class="pink-dot"></span>
+            EXCLUSIVELY FOR WOMEN
+        </span>
+
+        <h1>
+            STRONG WOMEN.<br>
+            <span>STRONGER FUTURES.</span>
+        </h1>
+
+        <p>
+            Your Fitness Journey Starts Here.
+            Discover a welcoming space dedicated to
+            strength, confidence and wellness.
+        </p>
+
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">
+                Join Our Studio <span>→</span>
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+                Discover More
+            </a>
+        </div>
+
+        <div class="hero-note">
+            <span>✦</span> Ladies-Only Fitness Studio
+            <span class="separator">|</span>
+            I-8 Islamabad
+        </div>
+
+    </div>
+
+    <a href="#about" class="scroll-down">SCROLL TO EXPLORE ↓</a>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="about section-padding" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image reveal">
+            <img
+                src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=900"
+                alt="Fitness and wellness training"
+                loading="lazy"
+            >
+
+            <div class="image-tag">
+                <span>WOMEN</span>
+                <strong>POWER</strong>
+            </div>
+        </div>
+
+        <div class="about-content reveal">
+
+            <span class="section-label">ABOUT OUR STUDIO</span>
+
+            <h2>
+                WELCOME TO<br>
+                <span>THE MUSCLE STUDIO I-8</span>
+            </h2>
+
+            <p>
+                Welcome to The Muscle Studio I-8, a ladies-only
+                fitness studio in Islamabad.
+            </p>
+
+            <p>
+                We believe fitness is about more than just exercise.
+                It is about building strength, confidence and
+                a        <div class="section-heading reveal">
+            <span class="section-label">LET'S CONNECT</span>
+            <h2>GET IN <span>TOUCH</span></h2>
+            <p>
+                Have questions? Contact The Muscle Studio I-8.
+            </p>
+        </div>
+
+        <div class="contact-grid">
+
+            <div class="contact-info reveal">
+
+                <div class="contact-card">
+                    <span class="contact-icon">⌖</span>
+                    <div>
+                        <h3>OUR LOCATION</h3>
+                        <p>
+                            5th Floor, THE ARK PLAZA,<br>
+                            Markaz, I-8 Markaz,<br>
+                            Islamabad, 44000, Pakistan.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">☎</span>
+                    <div>
+                        <h3>CALL US</h3>
+                        <p>0328 5126822</p>
+                        <a href="tel:+923285126822">Call Now →</a>
+                    </div>
+                </div>
+
+                <div class="contact-card">
+                    <span class="contact-icon">◉</span>
+                    <div>
+                        <h3>WHATSAPP</h3>
+                        <p>Chat with our studio.</p>
+                        <a
+                            href="https://wa.me/923285126822?text=Hello%2C%20I%20would%20like%20to%20know%20more%20about%20The%20Muscle%20Studio%20I-8."
+                            target="_blank"
+                            rel="noopener"
+                        >Message Us →</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="map-box reveal">
+                <iframe
+                    src="https://maps.google.com/maps?q=THE%20ARK%20PLAZA%20I-8%20Markaz%20Islamabad&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    width="100%"
+                    height="100%"
+                    style="border:0;"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="The Muscle Studio I-8 location map"
+                ></iframe>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container footer-content">
+
+        <div class="footer-brand">
+            <a href="#home" class="logo">
+                <span class="logo-icon">M</span>
+                <span>THE MUSCLE <strong>STUDIO</strong>
+                <small>I-8 ISLAMABAD</small></span>
+            </a>
+
+            <p>
+                Strong women. Stronger futures.
+                Your fitness journey starts here.
+            </p>
+        </div>
+
+        <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+            <a href="#home">Home</a>
+            <a href="#about">About Us</a>
+            <a href="#fitness">Fitness</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </div>
+
+        <div class="footer-contact">
+            <h3>CONTACT</h3>
+  
